@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+   
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <title> =Crawler</title>
+  </head>
+  <body>
+
+   
+
+      <!-- Image and text -->
+      <nav class="navbar navbar-dark" style="background-color: #313746;">
+        <a class="navbar-brand" href="#">
+          <img src="https://raw.githubusercontent.com/bda-research/node-crawler/master/crawler_primary.png" width="30" height="30" class="d-inline-block align-top" alt="">
+          <strong> =Crawler </strong>
+        </a>
+      </nav>
+
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <h1>=Crawler</h1>
+            <p> =Crawler is designed to help you find keywords in a whole Website from which you provide the URL address.</p>
+            <hr/>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <form method="POST" action="/crawler">
+              
+              <h5>TARGET</h5>
+              <div class="form-group">
+                <label for="protocol_label">Protocol</label>
+                <input required type="text" class="form-control" id="protocol" name="protocol" placeholder="https://">
+                <small id="protocol_help" class="form-text text-muted">Specify the URL address protocol - For instance: <strong>https://</strong></small>
+              </div>
+              <div class="form-group">
+                <label for="subdomain_label">Subdomain</label>
+                <input required type="text" class="form-control" id="subdomain" name="subdomain" placeholder="www.">
+                <small id="subdomain_help" class="form-text text-muted">Specify the URL address subdomain - For instance: <strong>www.</strong></small>
+              </div>
+              <div class="form-group">
+                <label for="domain_label">Domain</label>
+                <input required type="text" class="form-control" id="domain" name="domain" placeholder="lesiteduzero">
+                <small id="domain_help" class="form-text text-muted">Specify the URL address domain - For instance: <strong>lesiteduzero</strong> or <strong>capgemini</strong> or <strong>google</strong></small>
+              </div>
+              <div class="form-group">
+                <label for="extension_label">Extension</label>
+                <input required type="text" class="form-control" id="extension" name="extension" placeholder=".com">
+                <small id="extension_help" class="form-text text-muted">Specify the URL address extension - For instance: <strong>.com</strong> or <strong>.eu</strong> or <strong>.org</strong></small>
+              </div> 
+              <hr/>
+
+              <h5>KEYWORDS</h5>
+              <div class="form-group">
+                <label for="keywords_label">Keywords list</label>
+                <input required type="text" class="form-control" id="keywords" name="keywords" placeholder="galit, diverst, discriminiation">
+                <small id="keywords_help" class="form-text text-muted">Specify the keywords to search - Avoid accents such as [é, è, ê, ë] and all kind of specific characters ! For instance: <strong>galit</strong> for "égalité" or <strong>diversit</strong> for "diversité" or "diversity". Separate your keywords with ",". Only type lowercase words.</small>
+              </div>
+              <hr/>
+
+              <h5>STRENGHT</h5>
+              <div class="form-group">
+                <label for="strenght_label">Crawler strenght</label>
+                <select required class="form-control" id="strenght" name="strength">
+                  <option value="0">(0) TESTING</option value="">
+                  <option value="1">(1) LOW & FAST</option>
+                  <option value="2">(2) MEDIUM & SLOW</option>
+                  <option value="3">(3) HIGH & VERY SLOW</option>
+                </select>
+                <small id="strenght_help" class="form-text text-muted">Specify the crawler accuracy - Be aware that 0 might take a few seconds, 1 around a minute, 2 a few minutes and 3 could be quite long like 5-10 minutes of research.</small>
+              </div>
+              <hr/>
+
+              <button type="submit" class="btn btn-primary" style="background-color:#313746; border:none";>CRAWL NOW</button>
+            </form>
+          </div>
+        </div>
+      </div>
+       
+ 
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  </body>
+</html>

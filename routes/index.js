@@ -178,6 +178,8 @@ router.get('/', async function(req, res, next) {
 /* GET home page. */
 router.post('/crawler', async function(req, res, next) {
 
+  console.log(req.body)
+
   try {
     let {protocol, subdomain, domain, extension, keywords, strength} = req.body; 
     keywords = keywords.split(',')

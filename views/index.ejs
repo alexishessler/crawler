@@ -28,6 +28,7 @@
           <div class="col-12">
             <h1>=Crawler</h1>
             <p> =Crawler is designed to help you find keywords in a whole Website from which you provide the URL address.</p>
+            <p>Some well protected against BOT know Websites will prevent you from scanning their content (social networks Websites, big start-up tech...) Sorry ;)</p>
             <hr/>
           </div>
         </div>
@@ -79,8 +80,29 @@
               </div>
               <hr/>
 
-              <button type="submit" class="btn btn-primary" style="background-color:#313746; border:none";>CRAWL NOW</button>
+              <button id="submit" type="submit" class="btn btn-primary" style="background-color:#313746; border:none";>CRAWL NOW</button>
+              <div id="loading">
+
+              </div>
+
+              <script>
+                document.getElementById('submit').addEventListener('click', function(e){
+                  if(document.getElementById('protocol').value.length > 0
+                  && document.getElementById('subdomain').value.length > 0
+                  && document.getElementById('domain').value.length > 0
+                  && document.getElementById('extension').value.length > 0
+                  && document.getElementById('keywords').value.length > 0
+                  ){
+                    document.getElementById('submit').style.display = "none";
+                    const img = document.createElement('img'); 
+                    img.src = "https://lh3.googleusercontent.com/proxy/aS0V-p7kehT0welMl6xPFbcuChoScBAUCm4K92RKagkYitFmjWN3j2mSORVRcn8_8dyAjp27dQY19Q"
+                    document.getElementById('loading').appendChild(img)  
+                  }   
+                })
+              </script>
             </form>
+            
+
           </div>
         </div>
       </div>

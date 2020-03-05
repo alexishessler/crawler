@@ -183,6 +183,9 @@ router.post('/crawler', async function(req, res, next) {
   try {
     let {protocol, subdomain, domain, extension, keywords, strength} = req.body; 
     keywords = keywords.split(',')
+    for(let i = 0 ; i < keywords.length ; i++){
+      keywords[i] = keywords[i].toLowerCase()
+    }
     req.setTimeout(0)
     crawlingFunction(req, res, next, protocol, subdomain, domain, extension, keywords, strength)
   } catch {
